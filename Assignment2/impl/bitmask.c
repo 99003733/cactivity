@@ -1,19 +1,21 @@
 #include"bitmask.h"
 
-int set(int number,int set_bit)
+
+int setBit(int data, int pos) 
+{ 
+    return (data | (1 << pos)); 
+} 
+
+int clearNthBit(int data,int pos)
 {
-    return(number | (1<<set_bit));
+    return (data & (~(1 << pos)));
 }
 
-int reset(int number,int reset_bit)
-{
-    return(number & (~(1<< reset_bit)));
-}
-
-int flip(int number,int flip_bit)
-{
-    return(number ^ (1<<flip_bit));
-}
+int flipBit(int storage, int pos) 
+{ 
+    return storage ^= 1 << pos; 
+    
+} 
 
 int query(int number1,int number2,int query_type)
 {
