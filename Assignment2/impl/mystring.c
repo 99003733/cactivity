@@ -2,11 +2,19 @@
 #include"mystring.h"
 #include<string.h>
 
-int mystrlen(char *mystring)
+int mystrlen(char str_input[MAX_SIZE])
 {
-    int l;
-    for(l=0;mystring[l]!='\0';l++);
-    return l;
+    int len = 0,space = 0, tot;
+    for (int i=0; str_input[i]!='\0'; i++)
+    {
+        if (str_input[i] == ' ')
+            space++;
+        else 
+            len++;
+    }
+    tot = space + len;
+    //printf("%d", tot);
+    return tot;
 }
 
 char* mystrcpy(char *dest_string,char *src_string)
