@@ -12,9 +12,10 @@
 #ifndef _BITMASK_H_
 #define _BITMASK_H_
 
-int set(int number,int set_bit);
-int reset(int number,int reset_bit);
-int flip(int number,int flip_bit);
+int setBit(int n, int k);
+int clearNthBit(int data,int pos);
+int flipBit(int storage, int pos);
+
 int query(int number1,int number2,int query_type);
 
 #endif
