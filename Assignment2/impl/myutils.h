@@ -9,19 +9,25 @@
  * 
  */
 
-#ifndef _MYUTILS_H_
-#define _MYUTILS_H_
+#ifndef __MYUTILS_H
+#define __MYUTILS_H
 
-typedef enum res
-{
-    INCORRECT_NUMBER,
-    CORRECT_NUMBER
-}
-res;
+typedef enum error_p{
+    PRIME,
+    NONPRIME
+}error_p;
 
-double factorial(const unsigned int number);
-res isPrime(const unsigned int number);
-res isPalindrome(const unsigned int number);
-double vsum(int number,...);
+typedef enum error_t{
+    PALINDROME,
+    NONPALINDROME
+}error_t;
+
+int factorial(int number);
+error_p isprime(int n);
+error_t ispalindrome(int n);
+double vsum(int num,...);
+
+
+
 
 #endif
